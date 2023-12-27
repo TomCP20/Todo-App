@@ -1,12 +1,12 @@
 const form = document.querySelector(".form") as HTMLFormElement;
-const taskinput = document.querySelector("#task") as HTMLInputElement;
-const dateinput = document.querySelector("#date") as HTMLInputElement;
+const task_input = document.querySelector("#task") as HTMLInputElement;
+const date_input = document.querySelector("#date") as HTMLInputElement;
 const table = document.querySelector("table")!;
 
 form.addEventListener("submit", (e: Event) => 
 {
     e.preventDefault();
-    table.append(createTableRow(taskinput.value, dateinput.value));
+    table.append(createTableRow(task_input.value, date_input.value));
 
 })
 document.cookie = "";
@@ -18,25 +18,26 @@ function createTableRow(task: string, date: string): HTMLTableRowElement {
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    const checkboxcell = document.createElement("th");
-    checkboxcell.append(checkbox);
-    tr.append(checkboxcell);
+    const checkbox_cell = document.createElement("th");
+    checkbox_cell.append(checkbox);
+    tr.append(checkbox_cell);
 
-    const taskelement = document.createElement("th");
-    taskelement.textContent = task;
-    taskelement.setAttribute("contenteditable", "true");
-    tr.append(taskelement);
+    const task_element = document.createElement("th");
+    task_element.textContent = task;
+    task_element.setAttribute("contenteditable", "true");
+    tr.append(task_element);
 
-    const dateelement = document.createElement("th");
-    dateelement.textContent = date || "n/a";
-    tr.append(dateelement);
+    const date_element = document.createElement("th");
+    date_element.textContent = date || "n/a";
+    tr.append(date_element);
 
     const button = document.createElement("button");
     button.textContent = "Delete";
+    button.className = "delete"
     button.addEventListener("click", () => tr.remove());
-    const buttoncell = document.createElement("th");
-    buttoncell.append(button);
-    tr.append(buttoncell);
+    const button_cell = document.createElement("th");
+    button_cell.append(button);
+    tr.append(button_cell);
     
     return tr;
 }
