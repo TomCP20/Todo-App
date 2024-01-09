@@ -9,9 +9,6 @@ form.addEventListener("submit", (e: Event) =>
     table.append(createTableRow(task_input.value, date_input.value));
 
 })
-document.cookie = "";
-console.log(`Cookies: ${document.cookie}`);
-console.log("hello");
 
 function createTableRow(task: string, date: string): HTMLTableRowElement {
     const tr = document.createElement("tr");
