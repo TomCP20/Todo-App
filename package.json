@@ -1,0 +1,20 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "A simple front-end Todo App Written in Typescript.",
+  "main": "index.js",
+  "dependencies": {
+    "csstype": "^3.1.3",
+    "js-tokens": "^4.0.0",
+    "loose-envify": "^1.4.0",
+    "scheduler": "^0.23.0",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Thomas Campbell-Preston <tomcp20@gmail.com>",
+  "license": "ISC"
+}
