@@ -3,8 +3,7 @@ const task_input = document.querySelector("#task") as HTMLInputElement;
 const date_input = document.querySelector("#date") as HTMLInputElement;
 const table = document.querySelector("table")!;
 
-form.addEventListener("submit", (e: Event) => 
-{
+form.addEventListener("submit", (e: Event) => {
     e.preventDefault();
     table.append(createTableRow(task_input.value, date_input.value));
 
@@ -35,6 +34,6 @@ function createTableRow(task: string, date: string): HTMLTableRowElement {
     const button_cell = document.createElement("th");
     button_cell.append(button);
     tr.append(button_cell);
-    
+
     return tr;
 }
